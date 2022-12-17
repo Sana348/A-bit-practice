@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Welcome from "./components/Welcome";
+import Clock from "./components/Clock";
+import LoginControl from "./components/LoginControl";
+import Blog from "./components/Blog";
 
 function App() {
+  const [flag, setflag] = useState(true);
+  const userInfo = {
+    firstName: "Sana",
+    lastName: "mirza",
+  };
+
+  //  const toggle = () => {
+  //   console.log("Toggle Clicked")
+  //   setflag(!flag)
+  //  }
+
+  //const element = <h1>HEllo, world</h1>
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Blog />
+    </>
   );
 }
 
 export default App;
+
+// <LoginControl/>
